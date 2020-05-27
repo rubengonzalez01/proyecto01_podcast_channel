@@ -1,0 +1,17 @@
+h1 {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+header {
+  display: block;
+}
+
+header nav .cont-logo {
+  position: relative;
+  display: inline-block;
+}
+
+header nav .cont-menu {
+  float: right;
+}
+/*# sourceMappingURL=styles.css.map */
