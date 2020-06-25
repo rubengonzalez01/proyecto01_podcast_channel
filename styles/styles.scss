@@ -1,19 +1,10 @@
-h1{
-    font-family: 'IBM Plex Mono', monospace;
-}
-header{
-    display: block;
-    nav{
-        .cont-logo{
-        position: relative;
-        display: inline-block;
-        }
-        .cont-menu{
-        float: right;
-        }
-    }
+@import "scss/header";
+@import "scss/section";
+@import "scss/footer";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-// i.fa-bars:{
-
-// }

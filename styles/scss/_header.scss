@@ -1,0 +1,277 @@
+header{
+    display: block;
+    nav{                    
+        overflow: hidden;
+        .cont-logo{
+            position: relative;
+            display: inline-block;
+            top: 10px;
+            left: 16px;
+            .logo{
+                width: 24px;
+            }
+        }
+        .visually-hidden {
+            position: absolute;
+            left: -100vw;
+        }
+        .leb-menu{
+            z-index: 2;
+            position: absolute;
+            top: 13px;
+            right: 16px;
+            cursor: pointer; 
+            opacity: 0%;
+            i{                    
+                width: 18px;
+            }      
+        }
+        .control-me{
+            display: block;
+            position: relative;
+            top: 10px;
+            .secciones{
+                position: relative;                
+                opacity: 100%;                
+                padding: 10px 0;   
+                right: -850px;
+                z-index: 1;
+                li{
+                    list-style: none;
+                    background-color: #0000EC;
+                    padding: 5px 15px;
+                    cursor: pointer;
+                    .enlace{
+                        color: #FFFFFF;
+                        text-align: left;
+                        font-family: 'IBM Plex Mono';
+                        font-size: 16px;                    
+                        letter-spacing: 0;
+                        line-height: 28px;
+                        text-decoration: none;
+                        display: block;
+                    }
+                }
+            }
+            .hamburger{
+                position: absolute;
+                top: -25px;
+                right: 16px;
+                i{                    
+                    width: 18px;
+                }
+            }
+            .menu-close{
+                position: absolute;
+                background-color: #fff;
+                top: -25px;
+                right: 21px;
+                opacity: 0%;
+            }
+        }
+        .control-me .secciones li:hover{ 
+            .enlace{
+                text-decoration: line-through;
+                font-family: 'IBM Plex Mono';
+                color: #00F3BB;
+            }
+        }
+        .control-me .secciones li:active{ 
+            .enlace{
+                text-decoration: line-through;
+                font-family: 'IBM Plex Mono';
+                color: rgba(6,10,36,0.56);
+            }
+        }          
+    } // cierre nav
+    .titulo{        
+        top: 73px;
+        .titulo-principal{
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 36px;
+            color: #060A24;
+            letter-spacing: 0;
+            line-height: 42px;
+            .world{
+                text-decoration: line-through;
+            }
+        }
+        .intro{
+            font-family: 'IBM Plex Mono';
+            font-size: 14px;
+            color: #060A24;
+            letter-spacing: 0;
+            line-height: 22px;
+            margin-top: 16px;
+        }
+        .conoce{
+            position: relative;
+            background: #00F3BB;
+            margin-top: 36px;
+            margin-bottom: 24px;            
+            height: 48px;
+            font-family: 'IBM Plex Mono';
+            font-weight: bold;
+            font-size: 16px;
+            color: #060A24;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 22px;
+            cursor: pointer;
+            border: none;
+        }
+        .conoce:hover{
+            background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+            color: #FFFFFF;
+        }
+    }
+
+}
+
+
+
+
+
+/*---------------------------------------------------------------*/
+/*------------------ Propiedades Responsive ---------------------*/
+@media screen and (max-width: 800px){
+    .titulo{
+        position: absolute;
+        margin: 0 16px;
+        .conoce{
+            width: 100%;
+        }
+        .desktop{
+            display: none;
+        }
+    }
+    li:hover{                
+        
+            font-weight: bold;
+        
+    }
+
+    #toggle:checked ~ .control-me{
+        .secciones{
+            transform: translate(-850px,0px);
+            transition: transform 0.7s ease-out;
+        }
+        .menu-close{
+            opacity: 100%;
+            transition: opacity .8s ease;
+        }
+        .hamburger{
+            opacity: 0%;
+            transition: opacity .8s ease;
+        }
+    }
+    
+    #toggle:not(:checked) ~ .control-me{
+        .secciones{
+            transform: translate(850px,0px);
+            transition: transform 0.9s ease-in;
+        }
+        .menu-close{
+            opacity: 0%;
+            transition: opacity .8s ease;
+        }
+        .hamburger{
+            opacity: 100%;
+            transition: opacity .8s ease;
+        }
+    }
+    header nav .control-me .secciones li .enlace:active{
+        .secciones{
+            transform: translate(850px,0px);
+            transition: transform 0.9s ease-in;
+        }
+        .menu-close{
+            opacity: 0%;
+            transition: opacity .8s ease;
+        }
+        .hamburger{
+            opacity: 100%;
+            transition: opacity .8s ease;
+        }
+    }
+}
+
+
+
+@media screen and (min-width: 801px){
+    header{
+        nav{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            overflow: visible;
+            .cont-logo{
+                display: inline-flex;
+                left: 100px;
+                top: 22px;
+                .logo{
+                    width: 36px;
+                }
+            }                
+            .leb-menu{
+                display: none;
+            }
+            .control-me{
+                display: inline-flex;
+                justify-content: flex-end;
+                position: relative;
+                top: 0px;
+                .hamburger{
+                    display: none;
+                }
+                .menu-close{
+                    display: none;
+                }
+                .secciones{
+                    display: inline-flex;
+                    position: relative;
+                    transform: none;
+                    top: 26px;
+                    right: 100px;
+                    li{
+                        background: #FFFFFF;
+                        .enlace{
+                            color: #060A24;
+                        }
+                    }
+                }
+            }
+        } // cierre del nav
+        .titulo{
+            top: 143px;
+            position: relative;
+            margin: 0px 200px;
+            .titulo-principal{
+                display: inline;
+                font-size: 64px;
+                line-height: 84px;
+                .dot{
+                    color: #0000EC;
+                }
+            }
+            .intro{
+                font-size: 16px;
+                line-height: 24px;
+                margin-top: 0;
+                width: 628px;
+                .movile{
+                    display: none;
+                }
+            }
+            .conoce{
+                width: 226px;
+                height: 56px;
+                font-size: 18px;
+                line-height: 24px;
+                margin-top: 56px;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+

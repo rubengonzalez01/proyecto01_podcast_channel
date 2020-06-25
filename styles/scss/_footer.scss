@@ -1,0 +1,131 @@
+footer{
+    position: relative;
+    top: 586px;
+    .novedades{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        padding: 0 16px;
+        h2{
+            margin: 0 16px;
+            font-family: 'IBM Plex Sans';
+            font-size: 36px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            line-height: 42px;
+            text-align: center;
+        }
+        padding-top: 16vw;
+        background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
+        position: relative;
+        .superior{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 10vw;
+            /* set height to pixels if you want angle to change with screen width */
+        }
+        .escucha{
+            position: relative;
+            background: #00F3BB;
+            margin-top: 36px;
+            margin-bottom: 67px;            
+            height: 48px;
+            font-family: 'IBM Plex Mono';
+            font-weight: bold;
+            font-size: 16px;
+            color: #060A24;
+            letter-spacing: 0;
+            text-align: center;
+            line-height: 22px;
+            cursor: pointer;
+            border: none;
+        }
+        .escucha:hover{
+            background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+            color: #FFFFFF;
+        }
+    }
+    .social{
+        height: 121px;
+        display: grid;
+        grid-template: 22px 28px / 227px;
+        grid-column-gap: 16px;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        span{
+            font-family: 'IBM Plex Mono';
+            font-size: 14px;
+            color: #060A24;
+            letter-spacing: 0;
+            line-height: 22px;
+            margin-bottom: 16px;
+        }
+        .icon{
+            display: grid;
+            grid-template: 1fr / repeat(5,1fr);
+            justify-content: space-between;
+            a{
+                margin: 0 19px;
+                color: #060A24;
+            }
+            a:hover{
+                position: relative;
+                color: #0000FE;
+                top: -5px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+/*---------------------------------------------------------------*/
+/*------------------ Propiedades Responsive ---------------------*/
+@media screen and (max-width: 800px){
+    footer{
+        .novedades{
+            .escucha{                
+                width: 100%;                
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 801px){
+    footer{
+        top: 373px;
+        .novedades{
+            h2{
+                font-size: 48px;
+                line-height: 62px;
+            }
+            .escucha{
+                font-size: 18px;
+                line-height: 24px;
+                width: 345px;
+                height: 56px;
+                margin-bottom: 151px;
+            }
+        }
+        .social{
+            height: 95px;
+            padding: 0 100px;
+            grid-template: 1fr / 269px 269px;
+            justify-content: space-between;
+            align-content: center;
+            span{
+                margin: 0px;
+                font-size: 16px;
+                line-height: 28px;
+            }            
+        }
+    }
+}
